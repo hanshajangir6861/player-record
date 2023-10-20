@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    padding: 13px;
+    display: inline-block;
+}
+.form {
+    width: 356px;
+    height: 550px;
+    border: 2px solid;
+    display: inline-grid;
+    justify-content: space-between;
+}
+button.formbtn {
+    width: 82px;
+    margin-left: 128px;
+}
