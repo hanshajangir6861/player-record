@@ -10,18 +10,34 @@
     align-items: center;
 }
 
-label {
+/* label {
     padding: 13px;
     display: inline-block;
-}
+} */
 .form {
-    width: 356px;
+   
+    width: 470px;
     height: 550px;
     border: 2px solid;
-    display: inline-grid;
-    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+   
+}
+.table{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 10px;
+    
 }
 button.formbtn {
-    width: 82px;
+    /* width: 82px; */
+    text-align: center;
     margin-left: 128px;
+}
+input[type="text"] {
+    margin-left: 46px;
+}
+button {
+    margin-left: 45px;
 }

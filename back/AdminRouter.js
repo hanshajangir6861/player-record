@@ -15,4 +15,11 @@ const AdminToAdd = new AdminModel(req.body)
 let result = await AdminToAdd.save()
 res.json(result)
 })
+
+AdminRouter.get("/search/:id",async(req,res)=>{
+const searchToUser = req.params.id 
+const ItemId =  await AdminModel.findOne({aadharno:searchToUser})
+res.json(ItemId)
+})
+
 export default  AdminRouter

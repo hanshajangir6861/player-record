@@ -16,12 +16,18 @@ function Admin() {
     const [tournamentname, setTournamentName] =useState("")
     const [organisedat, setOrganisedAt] =useState("")
     const [venue, setVenue] =useState("")
+    const [action, setAction] = useState("")
+
+
+    const [search , setSearch] = useState(
+        
+    )
     
 
 
 const Addproduct = async()=>{
     let result = await axios.post("http://localhost:8080/form/add" ,{
-serial, playername, game,agegroup,position,state,tournamentname,organisedat,venue
+serial, aadharno,playername, game,agegroup,position,state,tournamentname,organisedat,venue
     } )
     console.log(result)
     result = result.data
@@ -32,8 +38,8 @@ serial, playername, game,agegroup,position,state,tournamentname,organisedat,venu
         <div className="main">
 
 <Link to="/Admin">Admin</Link>
-<Link to="/User">User</Link>
 
+<Link to='/Search'>Search</Link>
             <div className='form'>
                 <div className='table'>
                     <label htmlFor="Serial No">Serial No</label>
@@ -103,6 +109,17 @@ serial, playername, game,agegroup,position,state,tournamentname,organisedat,venu
                     <label htmlFor="Venue">Venue</label>
                     <input type="text" placeholder=' Venue' value={venue} onChange={(e)=>{setVenue(e.target.value)}}/><br />
                 </div>
+
+                <div className='table'>
+                    <label htmlFor="Action">Action</label>
+                <button className='pdfbtn'>Download pdf</button>
+                <button className='Msbtn'>Download </button>
+                <button className='pdfbtn'>Download pdf</button>
+
+                
+                </div>
+
+
 
 
                 <button type='Submit' className='formbtn' onClick={(e)=>{
